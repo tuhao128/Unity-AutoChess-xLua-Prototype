@@ -1,0 +1,87 @@
+# ============================================================
+#  Unity AutoChess xLua Prototype — Unity 项目 .gitignore
+# ============================================================
+
+# ------------------------------------------------------------
+# Unity 自动生成的目录（体积巨大，克隆后由 Unity 重新生成）
+# ------------------------------------------------------------
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Uu]ser[Ss]ettings/
+[Mm]emoryCaptures/
+[Rr]ecordings/
+Assets/AssetStoreTools*
+
+# ------------------------------------------------------------
+# IDE / 编辑器自动生成（Unity 会重新生成 .csproj / .sln）
+# ------------------------------------------------------------
+.vs/
+.vscode/
+.idea/
+.gradle/
+ExportedObj/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+*.pidb
+*.booproj
+*.svd
+*.pdb
+*.mdb
+*.opendb
+*.VC.db
+
+# ------------------------------------------------------------
+# Unity 崩溃报告与构建产物
+# ------------------------------------------------------------
+sysinfo.txt
+crashlytics-build.properties
+*.apk
+*.aab
+*.unitypackage
+*.app
+*.stackdump
+
+# ------------------------------------------------------------
+# 操作系统
+# ------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+[Tt]humbs.db
+Desktop.ini
+*~
+
+# ============================================================
+#  项目特有排除项
+# ============================================================
+
+# SubstanceAssets / LittleGamesPack 商店素材包：共 279 个文件 / 228 MB，
+# 但经过引用图遍历（SampleScene -> fbx/mat -> 贴图），只有 10 个文件真正
+# 参与渲染。这里整体排除，再用 `git add -f` 强制加入那 10 个（39.9 MB）。
+# 磁盘上的文件不受影响，项目照常运行。
+#
+# 已强制加入（被引用的 10 个）：
+#   Materials/CardsAndTables.mat
+#   Models/Cards/Card_Club2.fbx, Card_Heart2.fbx
+#   Models/Chess/WhitePawn.fbx
+#   Prefabs/Individual Pieces/Chess/ChessBoard.prefab
+#   Textures/CardsAndTables/CardsAndTables_*.png (Base_color / Height /
+#     Metallic / Mixed_AO / Normal_OpenGL)
+#
+# 若需要把整个素材包加回版本控制：git add -f "Assets/SubstanceAssets/<路径>"
+Assets/SubstanceAssets/**
+
+# 面试准备稿（含完整追问预案与自我剖析，不公开）
+项目面试介绍.md
